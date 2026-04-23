@@ -15,4 +15,13 @@ class Biodata extends Model
     {
         return $this->belongsTo(Department::class);
     }
+    public function classRoom() 
+    {
+    return $this->belongsTo(ClassRoom::class);
+    }
+
+    public function attendances() 
+    {
+    return $this->hasMany(Attendance::class);
+    }
 }
